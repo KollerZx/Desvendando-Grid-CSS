@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Divide as colunas e a primeira é 3x maior que a segunda*/
+    grid-template-rows: 20vh 70vh 10vh; /*Define as alturas da linhas*/
+    grid-template-areas: "header header"
+                        "main aside"
+                        "footer footer";
+}
+header{
+    background: yellow;
+    /*Define que o header ira pegar as 3 colunas, dessa forma ocupando toda primeira linha 
+    grid-column-start: 1; 
+    grid-column-end: 3;
+    
+    ou
+    grid-column: 1/3;*/
+    grid-area: header;
+}
+main{
+    background: blue;
+    /*Posiciona na segunda linha e primeira coluna
+    grid-column-start: 1; 
+    grid-column-end: 2;*/
+    grid-area: main;
+}
+aside{
+    background: green;
+    /*Posiciona na segunda linha e 3 coluna
+    grid-column-start: 2; 
+    grid-column-end: 3;*/
+    grid-area:aside;
+}
+footer{
+    background: red;
+    /*Define para pegar as 3 colunas da linha
+    grid-column-start: 1; 
+    grid-column-end: 3;*/
+    grid-area: footer;
+}

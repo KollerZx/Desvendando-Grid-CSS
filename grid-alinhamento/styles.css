@@ -1,0 +1,48 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    background: black;
+    width: 100vw; /*100 View width define toda largura visivel */
+    height: 100vh;/**100 View height define toda altura visivel */
+
+    display: grid;
+    /*Fatia o grid em 3 colunas e 3 linhas de tamanhos iguais ocupando todo o layout do grid*/
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    
+    /*Fatia o grid em pequenos box de 10px cada, sobrando um enorme espaço vazio do layout total
+    grid-template-columns: 10px 10px 10px;
+    grid-template-rows: 10px 10px 10px;
+    */
+    gap: 5px;
+
+    /*
+    justify-content: center;
+    align-content: center;
+    */
+
+    /*
+    justify-items: start;
+    align-items: center;
+    */
+}
+
+/*Container no nosso primeiro nivel de divs*/
+.container > div {
+    background: #7159c1;
+    width: 50%;
+    height: 50%;
+
+    
+}
+.center{
+    justify-self: center;
+    align-self: center;
+}
